@@ -1,0 +1,24 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(formulario: Form[Hotel])
+
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+ 
+@import b3.vertical.fieldConstructor
+@main("Welcome to Play") {
+	@helper.form(routes.HotelController.salvaNovoHotel){
+		<h1>Hoteis</h1>
+		@b3.text(formulario("codigo"), '_label -> "Código:")
+		@b3.text(formulario("cidade"),'_label -> "Cidade:")
+		@b3.text(formulario("nome"), '_label -> "Nome:")
+		@b3.submit('class -> "btn btn-primary") { Cadastrar }
+
+	}	
+}

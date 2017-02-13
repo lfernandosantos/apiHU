@@ -1,0 +1,25 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(formulario: Form[Disponibilidade])
+
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+ 
+@import b3.vertical.fieldConstructor
+@main("Welcome to Play") {
+	@helper.form(routes.DisponibilidadeController.salvaDisponibilidade){
+		<h1>Disponibilidade</h1>
+		@b3.text(formulario("hotel"), '_label -> "Hotel:")
+		@b3.text(formulario("data"),'_label -> "Data:")
+		@b3.text(formulario("disponibilidade"), '_label -> "disponibilidade:")
+		@b3.text(formulario("minimoDeNoites"), '_label -> "minimoDeNoites:")
+		@b3.submit('class -> "btn btn-primary") { Cadastrar }
+
+	}	
+}

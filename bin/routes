@@ -1,0 +1,13 @@
+
+GET     /                           controllers.HomeController.index
+POST    /hotel/novo                 controllers.HotelController.salvaNovoHotel
+GET     /hotel/novo                 controllers.HotelController.formularioNovoHotel
+POST    /disponibilidade/novo       controllers.DisponibilidadeController.salvaDisponibilidade
+GET     /disponibilidade/novo       controllers.DisponibilidadeController.formularioNovaDisponibilidade
+GET     /message                    controllers.AsyncController.message
+
+# API
+GET		/api/hoteis					controllers.ApiController.buscaHoteisComFiltros
+GET		/api/hoteis/todos			controllers.ApiController.todos
+GET		/api/disponibilidade		controllers.ApiController.buscaDisponibilidadesComFiltros
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

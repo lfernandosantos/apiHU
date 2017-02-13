@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/projeto-hu -Dhttp.port=${PORT} -Dplay.evolutions.db.default.autoApply=true  -Dbd.default.url=${CLEARDB_DATABASE_URL} -Dplay.evolutions.db.default.autoApply=true
