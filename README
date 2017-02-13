@@ -1,3 +1,8 @@
+Para rodar a API é necessário alterar o arquivo aplication.conf dentro da pasta conf, informando os dados do banco de dados.
+- Ter instalado o Play with Activator
+- Executar o arquivo activator que se encontra dentro da pasta Activator. O comando deve ser executado dentro da pasta do projeto.
+- Executar o comando "run"
+
 This is your new Play application
 =================================
 
